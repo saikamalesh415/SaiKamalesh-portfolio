@@ -1871,6 +1871,41 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+  .section-title {
+  color:white;
+  font-size: var(--fs-4); /* just slightly smaller than About Me title */
+  font-weight: var(--fw-600);
+  margin: 5px;
+   margin-bottom: 0px;
+}
+
+.skills-list,
+.cert-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin:2px;
+  list-style-type: circle;
+  color: var(--light-gray); /* like the About Me text */
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+li{
+  margin:0px;
+}
+
+.cert-link {
+  color: var(--blue-crayola);
+  text-decoration: none;
+  font-weight: var(--fw-400);
+  font-size: var(--fs-6);
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+
 
 
   /**
@@ -1879,4 +1914,68 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+.certifications{
+position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+ 
+}
+
+.row-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.row-container .a {
+  width: 48%;
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .row-container .a {
+    width: 100%;
+  }
+}
+
+.section-title a {
+  color: var(--blue-crayola); /* or any color in your theme */
+  text-decoration: none;
+}
+
+.section-title a:hover {
+  text-decoration: underline;
+}
+
+.resume-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff; /* blue crayola / primary color */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
 }

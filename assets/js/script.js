@@ -134,6 +134,27 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const status = document.getElementById("form-status");
+
+  let data = new FormData(form);
+  let res = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: { Accept: "application/json" }
+  });
+
+  if (res.ok) {
+    status.textContent = "Message sent successfully!";
+    form.reset();
+    formBtn.setAttribute("disabled", ""); // re-disable button
+  } else {
+    status.textContent = "Oops! Something went wrong.";
+  }
+});
+
+
 
 
 // page navigation variables
